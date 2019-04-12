@@ -5,6 +5,7 @@
     <title>HSU Virtual Tour Test</title>
     <meta name="description" content="HSU DML 360 Gallery Template">
     <meta name="author" content="Original template by Kumar Ahir - VR Designer">
+    <link href="style.css" type="text/css" rel="stylesheet">
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -18,12 +19,12 @@
   <body>
     <a-scene background="color: #ECECEC">
       <a-assets>
-       <img id="point1" src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Fmall.jpg?1554455298222"/> <!-- Church -->
-        <img id="point2" src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2FGazebo.jpg?1554455212706"/> <!-- Gazebo -->
-        <img id="point3" src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Fchurch.jpg?1554455321534"/> <!-- Mall -->
+       <img id="point1" src="mall.jpg"/> <!-- Church -->
+        <img id="point2" src="Gazebo.jpg"/> <!-- Gazebo -->
+        <img id="point3" src="church.jpg"/> <!-- Mall -->
         
-        <img id="hotspot" src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Farrow.png?1554455227512"/> <!-- up arrow -->
-        <img id="info1img" src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Farrow.png?1554455227512" alpha-test="0.5"/> <!-- info icon -->
+        <img id="hotspot" src="arrow.png"/> <!-- up arrow -->
+        <img id="info1img" src="arrow.png" alpha-test="0.5"/> <!-- info icon -->
       </a-assets>
       
       <a-entity id="spots" hotspots>
@@ -90,7 +91,10 @@
                   material="shader:flat;color:#fe0179"
                   animation__mouseenter="property:scale;to:2 2 2;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1">
         </a-entity>
+         <a-entity class="HUD" geometry="primitive: plane; height: 0.4; width: 0.8" position="-1.5 -0.7 -1"
+            material="color: gray">
+            	
+            </a-entity>
       </a-entity>
-    </a-scene>
   </body>
 </html>
