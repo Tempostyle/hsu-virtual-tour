@@ -31,6 +31,8 @@
         <a-entity id="group-point1">
           <a-entity text="width: 4; align: center; value: Welcome! \n Take a look around - stare at the \n arrows to travel to new places!"
                     position="0 10.75 -2"></a-entity>
+                    position="0 4.75 -2"></a-entity>
+
           <a-image spot="linkto:#point2;spotgroup:group-point2" position="-2 1 4">
             <a-entity geometry="primitive: plane; height: auto; width: auto" 
                       material="transparent: true; opacity: 0;" 
@@ -52,8 +54,14 @@
                       id="info1text"
                       animation="property: scale; to: 1 1 1; startEvents: popup;"></a-entity>
           </a-plane>
+
           
           <a-plane id="info2" 
+
+          </a-entity>
+        
+        <a-plane id="info2" 
+
                    material="transparent: true;"
                    class="info" 
                    position="-1 4 -5"
@@ -67,6 +75,7 @@
                       id="info2text"
                       animation="property: scale; to: 1 1 1; startEvents: popup;"></a-entity>
           </a-plane>
+
           
           <a-plane id="info3" 
                    material="transparent: true;"
@@ -77,14 +86,28 @@
             <a-entity geometry="primitive: plane; height: auto; width: auto" 
                       material="transparent: true; opacity: 0;" 
                       text="width: 5; align: center; value: This is The Lumberjack Arena. It's for athletes or something."
+
+          </a-entity>
+      
+      <a-plane id="info3" 
+                   material="transparent: true;"
+                   class="info" 
+                   position="-5 4 -1"
+                   rotation="0 60 0"
+                   src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Finfo.png?1556052697135">
+            <a-entity geometry="primitive: plane; height: auto; width: auto" 
+                      material="transparent: true; opacity: 0;" 
+                      text="width: 5; align: center; value: This is the pool of the Kinseology Building. It's open to students and community members alike"
+
                       position="0 -0.75 0"
                       scale="0 0 0"
                       id="info3text"
                       animation="property: scale; to: 1 1 1; startEvents: popup;"></a-entity>
           </a-plane>
+
           
           </a-entity>
-        </a-entity>    
+        </a-entity>  
           
         <a-entity id="group-point2" scale="0 0 0">
           <a-image spot="linkto:#point1;spotgroup:group-point1" position="10 0 -4" rotation="50 0 0">
