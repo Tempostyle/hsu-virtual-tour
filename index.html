@@ -5,6 +5,7 @@
     <title>HSU Virtual Tour Test</title>
     <meta name="description" content="HSU DML 360 Gallery Template">
     <meta name="author" content="Original template by Kumar Ahir - VR Designer">
+    <link href="style.css" type="text/css" rel="stylesheet">
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -18,8 +19,8 @@
   <body>
     <a-scene background="color: #ECECEC">
       <a-assets>
-       <img id="point1" src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Fmall.jpg?1554455298222"/> <!-- Church -->
-        <img id="point2" src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2FGazebo.jpg?1554455212706"/> <!-- Gazebo -->
+       <img id="point1" src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2FFLY06101-1.jpg?1555669826630"/> <!-- Church -->
+        <img id="point2" src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2FFLY05501.jpg?1555669822959"/> <!-- Gazebo -->
         <img id="point3" src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Fchurch.jpg?1554455321534"/> <!-- Mall -->
         
         <img id="hotspot" src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Farrow.png?1554455227512"/> <!-- up arrow -->
@@ -29,27 +30,62 @@
       <a-entity id="spots" hotspots>
         <a-entity id="group-point1">
           <a-entity text="width: 4; align: center; value: Welcome! \n Take a look around - stare at the \n arrows to travel to new places!"
-                    position="0 1.75 -2"></a-entity>
+                    position="0 10.75 -2"></a-entity>
           <a-image spot="linkto:#point2;spotgroup:group-point2" position="-2 1 4">
             <a-entity geometry="primitive: plane; height: auto; width: auto" 
                       material="transparent: true; opacity: 0;" 
                       text="width: 5; align: center; value: Next: Gazebo"
                       position="0 -0.75 0"></a-entity>
           </a-image>
+          
           <a-plane id="info1" 
                    material="transparent: true;"
                    class="info" 
-                   position="-2 1 -4"
-                   src="#info1img">
+                   position="-5 4 -1"
+                   rotation="0 60 0"
+                   src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Finfo.png?1556052697135">
             <a-entity geometry="primitive: plane; height: auto; width: auto" 
                       material="transparent: true; opacity: 0;" 
-                      text="width: 5; align: center; value: This text will popup \n when the fuse event is fired."
+                      text="width: 5; align: center; value: This is the pool of the Kinseology Building. It's open to students and community members alike"
                       position="0 -0.75 0"
                       scale="0 0 0"
                       id="info1text"
                       animation="property: scale; to: 1 1 1; startEvents: popup;"></a-entity>
           </a-plane>
-        </a-entity>
+          
+          <a-plane id="info2" 
+                   material="transparent: true;"
+                   class="info" 
+                   position="-1 4 -5"
+                   rotation="0 50 0"
+                   src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Finfo.png?1556052697135">
+            <a-entity geometry="primitive: plane; height: auto; width: auto" 
+                      material="transparent: true; opacity: 0;" 
+                      text="width: 5; align: center; value: This is the study area of the Kinseology building"
+                      position="0 -0.75 0"
+                      scale="0 0 0"
+                      id="info2text"
+                      animation="property: scale; to: 1 1 1; startEvents: popup;"></a-entity>
+          </a-plane>
+          
+          <a-plane id="info3" 
+                   material="transparent: true;"
+                   class="info" 
+                   position="1 8 5"
+                   rotation="0 200 0"
+                   src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Finfo.png?1556052697135">
+            <a-entity geometry="primitive: plane; height: auto; width: auto" 
+                      material="transparent: true; opacity: 0;" 
+                      text="width: 5; align: center; value: This is The Lumberjack Arena. It's for athletes or something."
+                      position="0 -0.75 0"
+                      scale="0 0 0"
+                      id="info3text"
+                      animation="property: scale; to: 1 1 1; startEvents: popup;"></a-entity>
+          </a-plane>
+          
+          </a-entity>
+        </a-entity>    
+          
         <a-entity id="group-point2" scale="0 0 0">
           <a-image spot="linkto:#point1;spotgroup:group-point1" position="10 0 -4" rotation="50 0 0">
             <a-entity geometry="primitive: plane; height: auto; width: auto" 
@@ -57,6 +93,38 @@
                       text="width: 5; align: center; value: Next: Mall"
                       position="0 -0.75 0"></a-entity>
           </a-image>
+          
+          <a-plane id="info4" 
+                   material="transparent: true;"
+                   class="info" 
+                   position="-5 6 -1"
+                   rotation="0 60 0"
+                   src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Finfo.png?1556052697135">
+            <a-entity geometry="primitive: plane; height: auto; width: auto" 
+                      material="transparent: true; opacity: 0;" 
+                      text="width: 5; align: center; value: This is the rock-climbing wall of SRC gym. It's open to students and faculty."
+                      position="0 -0.75 0"
+                      scale="0 0 0"
+                      id="info4text"
+                      animation="property: scale; to: 1 1 1; startEvents: popup;"></a-entity>
+          </a-plane>
+          
+          <a-plane id="info5" 
+                   material="transparent: true;"
+                   class="info" 
+                   position="-5 6 -1"
+                   rotation="0 60 0"
+                   src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Finfo.png?1556052697135">
+            <a-entity geometry="primitive: plane; height: auto; width: auto" 
+                      material="transparent: true; opacity: 0;" 
+                      text="width: 5; align: center; value: These are some of the various sports equipment in the SRC gym."
+                      position="0 -0.75 0"
+                      scale="0 0 0"
+                      id="info5text"
+                      animation="property: scale; to: 1 1 1; startEvents: popup;"></a-entity>
+          </a-plane>
+          
+          
           <a-image spot="linkto:#point3;spotgroup:group-point3" position="2 0 4" rotation="50 0 0">
             <a-entity geometry="primitive: plane; height: auto; width: auto" 
                       material="transparent: true; opacity: 0;" 
@@ -77,19 +145,22 @@
                       text="width: 5; align: center; value: Next: Mall"
                       position="0 -0.75 0"></a-entity>
           </a-image>
-        </a-entity>
       </a-entity>
       
       <a-sky id="skycolor" color="#333"></a-sky>
       <a-sky id="skybox" src="#point1"></a-sky>
       
-      <a-entity id="cam" camera position="0 1.6 0" look-controls rotation="0 0 0">
+      <a-entity id="cam" camera position="0 4.7 0" look-controls rotation="0 0 0">
         <a-entity cursor="fuse:true;fuseTimeout:2000"
                   geometry="primitive: ring; radiusInner: 0.05; radiusOuter: 0.06;"
                   position="0 0 -1.8"
                   material="shader:flat;color:#fe0179"
                   animation__mouseenter="property:scale;to:2 2 2;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1">
         </a-entity>
+<!--          <a-entity class="HUD" geometry="primitive: plane; height: 0.4; width: 0.8" position="-1.5 -0.7 -1"
+            material="color: gray">
+            	
+            </a-entity> -->
       </a-entity>
     </a-scene>
   </body>

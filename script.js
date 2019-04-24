@@ -9,6 +9,9 @@ AFRAME.registerComponent('hotspots',{
         //get the entire new spot group and scale it to 1
         var newspotgroup=document.getElementById(evt.detail.newspots);
         newspotgroup.setAttribute("scale","1 1 1");
+          
+          
+          
       });
     }
   });
