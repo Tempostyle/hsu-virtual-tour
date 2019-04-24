@@ -23,34 +23,71 @@
         <img id="point2" src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2FFLY05501.jpg?1555669822959"/> <!-- Gazebo -->
         <img id="point3" src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Fchurch.jpg?1554455321534"/> <!-- Mall -->
         
-        <img id="hotspot" src="arrow.png"/> <!-- up arrow -->
-        <img id="info1img" src="arrow.png" alpha-test="0.5"/> <!-- info icon -->
+        <img id="hotspot" src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Farrow.png?1554455227512"/> <!-- up arrow -->
+        <img id="info1img" src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Farrow.png?1554455227512" alpha-test="0.5"/> <!-- info icon -->
       </a-assets>
       
       <a-entity id="spots" hotspots>
         <a-entity id="group-point1">
           <a-entity text="width: 4; align: center; value: Welcome! \n Take a look around - stare at the \n arrows to travel to new places!"
-                    position="0 1.75 -2"></a-entity>
+                    position="0 4.75 -2"></a-entity>
           <a-image spot="linkto:#point2;spotgroup:group-point2" position="-2 1 4">
             <a-entity geometry="primitive: plane; height: auto; width: auto" 
                       material="transparent: true; opacity: 0;" 
                       text="width: 5; align: center; value: Next: Gazebo"
                       position="0 -0.75 0"></a-entity>
           </a-image>
+          
           <a-plane id="info1" 
                    material="transparent: true;"
                    class="info" 
-                   position="-2 1 -4"
-                   src="#info1img">
+                   position="-5 4 -1"
+                   rotation="0 60 0"
+                   src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Finfo.png?1556052697135">
             <a-entity geometry="primitive: plane; height: auto; width: auto" 
                       material="transparent: true; opacity: 0;" 
-                      text="width: 5; align: center; value: This text will popup \n when the fuse event is fired."
+                      text="width: 5; align: center; value: This is the pool of the Kinseology Building. It's open to students and community members alike"
                       position="0 -0.75 0"
                       scale="0 0 0"
                       id="info1text"
                       animation="property: scale; to: 1 1 1; startEvents: popup;"></a-entity>
           </a-plane>
-        </a-entity>
+          </a-entity>
+        
+        <a-plane id="info2" 
+                   material="transparent: true;"
+                   class="info" 
+                   position="-1 4 -5"
+                   rotation="0 50 0"
+                   src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Finfo.png?1556052697135">
+            <a-entity geometry="primitive: plane; height: auto; width: auto" 
+                      material="transparent: true; opacity: 0;" 
+                      text="width: 5; align: center; value: This is the study area of the Kinseology building"
+                      position="0 -0.75 0"
+                      scale="0 0 0"
+                      id="info2text"
+                      animation="property: scale; to: 1 1 1; startEvents: popup;"></a-entity>
+          </a-plane>
+          </a-entity>
+      
+      <a-plane id="info3" 
+                   material="transparent: true;"
+                   class="info" 
+                   position="-5 4 -1"
+                   rotation="0 60 0"
+                   src="https://cdn.glitch.com/138b3c19-934f-4712-9d74-e7118815d663%2Finfo.png?1556052697135">
+            <a-entity geometry="primitive: plane; height: auto; width: auto" 
+                      material="transparent: true; opacity: 0;" 
+                      text="width: 5; align: center; value: This is the pool of the Kinseology Building. It's open to students and community members alike"
+                      position="0 -0.75 0"
+                      scale="0 0 0"
+                      id="info3text"
+                      animation="property: scale; to: 1 1 1; startEvents: popup;"></a-entity>
+          </a-plane>
+      
+        
+          
+          
         <a-entity id="group-point2" scale="0 0 0">
           <a-image spot="linkto:#point1;spotgroup:group-point1" position="10 0 -4" rotation="50 0 0">
             <a-entity geometry="primitive: plane; height: auto; width: auto" 
@@ -78,23 +115,23 @@
                       text="width: 5; align: center; value: Next: Mall"
                       position="0 -0.75 0"></a-entity>
           </a-image>
-        </a-entity>
       </a-entity>
       
       <a-sky id="skycolor" color="#333"></a-sky>
       <a-sky id="skybox" src="#point1"></a-sky>
       
-      <a-entity id="cam" camera position="0 1.6 0" look-controls rotation="0 0 0">
+      <a-entity id="cam" camera position="0 4.7 0" look-controls rotation="0 0 0">
         <a-entity cursor="fuse:true;fuseTimeout:2000"
                   geometry="primitive: ring; radiusInner: 0.05; radiusOuter: 0.06;"
                   position="0 0 -1.8"
                   material="shader:flat;color:#fe0179"
                   animation__mouseenter="property:scale;to:2 2 2;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1">
         </a-entity>
-         <a-entity class="HUD" geometry="primitive: plane; height: 0.4; width: 0.8" position="-1.5 -0.7 -1"
+<!--          <a-entity class="HUD" geometry="primitive: plane; height: 0.4; width: 0.8" position="-1.5 -0.7 -1"
             material="color: gray">
             	
-            </a-entity>
+            </a-entity> -->
       </a-entity>
+    </a-scene>
   </body>
 </html>
